@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Student</title>
+    <link rel="stylesheet" href="{{ url_for('static',
+filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Search Student</h2>
+        <form method="POST">
+            <label>Student ID</label>
+            <input type="number" name="student_id" required>
+            <button type="submit">Search</button>
+        </form>
+        {% if student %}
+        <p>ID: {{ student.student_id }}</p>
+        <p>Name: {{ student.name }}</p>
+        <p>Department: {{ student.department }}</p>
+        <p>Marks: {{ student.marks }}</p>
+        {% elif searched %}
+        <p>Student not found.</p>
+        {% endif %}
+        <a href="{{ url_for('home') }}">Home</a>
+    </div>
+</body>
+
+</html>

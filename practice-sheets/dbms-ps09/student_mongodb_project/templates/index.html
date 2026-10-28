@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Student Record Management</title>
+    <link rel="stylesheet" href="{{ url_for('static',
+filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Student Record Management System</h1>
+        <nav>
+            <a href="{{ url_for('add_student') }}">Add Student</a>
+            <a href="{{ url_for('list_students') }}">View Students</a>
+            <a href="{{ url_for('search_student') }}">Search
+                Student</a>
+        </nav>
+        <p>This application stores student records in MongoDB.</p>
+    </div>
+</body>
+
+</html>
