@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Add Medicine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Add Medicine</h2>
+        <form method="POST">
+            <label>Medicine ID</label>
+            <input type="number" name="medicine_id" required>
+            <label>Medicine Name</label>
+            <input type="text" name="name" required>
+            <label>Category</label>
+            <input type="text" name="category" required>
+            <label>Price</label>
+            <input type="number" step="0.01" name="price" required>
+            <label>Stock</label>
+            <input type="number" name="stock" required>
+            <label>Manufacturer</label>
+            <input type="text" name="manufacturer" required>
+            <button type="submit">Save Medicine</button>
+        </form>
+    </div>
+</body>
+
+</html>

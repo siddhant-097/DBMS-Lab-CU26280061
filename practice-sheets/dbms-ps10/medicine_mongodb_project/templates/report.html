@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Inventory Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Inventory Report</h2>
+        <p>Total medicines: {{ total_medicines }}</p>
+        <p>Total stock: {{ total_stock }}</p>
+        <p>Low stock medicines: {{ low_stock_count }}</p>
+        {% if most_expensive %}
+        <p>Most expensive: {{ most_expensive.name }} - {{ most_expensive.price }}</p>
+        {% endif %}
+        {% if cheapest %}
+        <p>Cheapest: {{ cheapest.name }} - {{ cheapest.price }}</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>

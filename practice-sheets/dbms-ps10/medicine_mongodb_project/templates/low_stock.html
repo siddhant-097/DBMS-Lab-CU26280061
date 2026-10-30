@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Low Stock</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Low Stock Medicines</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Stock</th>
+            </tr>
+            {% for m in medicines %}
+            <tr>
+                <td>{{ m.medicine_id }}</td>
+                <td>{{ m.name }}</td>
+                <td>{{ m.stock }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    </div>
+</body>
+
+</html>

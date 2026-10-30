@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Medicine Management</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Hospital Medicine Management System</h1>
+        <nav>
+            <a href="{{ url_for('add_medicine') }}">Add Medicine</a>
+            <a href="{{ url_for('list_medicines') }}">View Medicines</a>
+            <a href="{{ url_for('search_medicine') }}">Search</a>
+            <a href="{{ url_for('low_stock') }}">Low Stock</a>
+            <a href="{{ url_for('report') }}">Inventory Report</a>
+        </nav>
+    </div>
+</body>
+
+</html>

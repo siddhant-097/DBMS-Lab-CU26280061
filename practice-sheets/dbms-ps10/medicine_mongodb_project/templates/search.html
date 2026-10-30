@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Search Medicine</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h2>Search Medicine</h2>
+        <form method="POST">
+            <label>Medicine ID</label>
+            <input type="number" name="medicine_id" required>
+            <button type="submit">Search</button>
+        </form>
+        {% if medicine %}
+        <p>Name: {{ medicine.name }}</p>
+        <p>Category: {{ medicine.category }}</p>
+        <p>Price: {{ medicine.price }}</p>
+        <p>Stock: {{ medicine.stock }}</p>
+        {% elif searched %}
+        <p>Medicine not found.</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>
